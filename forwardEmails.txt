@@ -1,0 +1,37 @@
+Sub ForwardGolub()
+'
+' ForwardGolub Macro
+'
+'lp
+'8448795052@enterprisefaxout.wellsfargo.com
+'f5
+'8448798587@enterprisefaxout.wellsfargo.com
+'llc
+'8448794994@enterprisefaxout.wellsfargo.com
+'24
+'8448795259@enterprisefaxout.wellsfargo.com
+'38
+'8448798312@enterprisefaxout.wellsfargo.com
+
+Dim outForward As Outlook.MailItem
+    
+  
+    
+For Each objItem In ActiveExplorer.Selection
+       
+            Set oMail = objItem
+            
+            Set outForward = objItem.Forward
+  
+            outForward.Recipients.Add "8448795052@enterprisefaxout.wellsfargo.com"
+            outForward.Send
+                  
+           
+       
+    
+Next
+    
+    
+    
+    
+End Sub
